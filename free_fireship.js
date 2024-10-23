@@ -6,7 +6,7 @@ function freeFireship() {
     return;
   }
 
-  if (videoPlayer.querySelector("iframe")) {
+  if (videoPlayer.getAttribute("free") == "true") {
     // console.log("already free");
     return;
   }
