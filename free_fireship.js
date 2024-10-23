@@ -1,8 +1,13 @@
-function hackFireship() {
+function freeFireship() {
   const videoPlayer = document.querySelector("video-player");
 
   if (!videoPlayer) {
     console.error("<video-player> element not found.");
+    return;
+  }
+
+  if (videoPlayer.querySelector("iframe")) {
+    // console.log("already free");
     return;
   }
 
@@ -37,4 +42,6 @@ function hackFireship() {
   console.log(iframeHTML);
 }
 
-hackFireship();
+setInterval(() => {
+  freeFireship();
+}, 500);
